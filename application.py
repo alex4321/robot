@@ -5,7 +5,7 @@ from text_to_speech import TextToSpeech
 from recorder import SpeechCapture
 from config import Config
 from stdhandlers import handlers as stdhandlers
-from player import play
+from player import play_list
 import json
 
 
@@ -49,9 +49,10 @@ class Application:
     def _process_answer(self, commands):
         finish, results = self.command_processor.process_commands(commands)
         if not finish:
-            for result in results:
-                if result:
-                    play(result)
+            noempty_results = [result
+                               for result in results
+                               if result is not None]
+            play_list(noempty_results)
 
     def welcome(self):
         """
