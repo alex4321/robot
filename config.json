@@ -1,0 +1,26 @@
+{
+    "command_handlers": {},
+    "apiai": {
+        "client_access_token": "ApiAiKey",
+        "language": "ru"
+    },
+    "speechkit": {
+        "key": "SpeechkitKey",
+        "recognition": {
+            "language": "ru-RU"
+        },
+        "synthesis": {
+            "cache_size": 25,
+            "language": "ru-RU",
+            "speaker": "alyss",
+            "emotion": "evil",
+            "speed": 1.0
+        }
+    },
+    "record": {
+        "silence_calculation_chunks": 40,
+        "speech_level_coefficient": 3.0,
+        "start_wait_chunks": 200,
+        "finish_wait_chunks": 100
+    }
+}
